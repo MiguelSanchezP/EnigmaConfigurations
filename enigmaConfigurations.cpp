@@ -7,6 +7,13 @@
 *   This file generates random configurations for the enigma machine, taking into account the quantity of rotors,
 * the quantity of reflectors and the quantity of wires used on the plugboard, we assume that the alphabet used
 * on the machine is the latin one
+*
+*
+*
+*
+* TODO: make an array of possible outcomes and choose using a rand function to select the letter, once it is 
+*       selected, delete it from the array, so it cannot be selected again
+*		
 */
 #include <iostream>
 #include <cstdlib>
@@ -38,7 +45,7 @@ int main () {
 		cin >> quantityPairs;
 	}
 	cout <<"------------------------------------" << endl;
-  alphabet [] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'Y', 'Z'};
+  	char alphabet [] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'Y', 'Z'};
 	ofstream write;
 	write.open("Configuration.txt");
 	for (int d = 0; d <quantityDays; d++) {
